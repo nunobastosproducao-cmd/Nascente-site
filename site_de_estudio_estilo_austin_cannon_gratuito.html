@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teu Estúdio | Produtor Musical</title>
+  <meta name="description" content="Produtor musical e estúdio de gravação. Pop, Eletrónico, Pop Country. Mix, master, produção e composição." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --card: #14141b;
+      --text: #eaeaf2;
+      --muted: #a3a3b2;
+      --brand: #7c5cff;
+      --brand-2: #21c8ff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin:0 auto}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(8px);background:rgba(11,11,15,.6);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px}
+    .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(45deg,var(--brand),var(--brand-2));box-shadow:0 0 12px rgba(124,92,255,.8)}
+    .menu{display:flex;gap:18px;flex-wrap:wrap}
+    .menu a{font-weight:600;opacity:.85}
+    .menu a:hover{opacity:1}
+    .cta{padding:10px 14px;border-radius:999px;background:linear-gradient(45deg,var(--brand),var(--brand-2));font-weight:700}
+
+    /* HERO */
+    .hero{position:relative;min-height:72vh;display:grid;place-items:center;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;opacity:.25;filter:grayscale(20%)}
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 40%, rgba(124,92,255,.18), transparent 60%), linear-gradient(to bottom, rgba(11,11,15,.2), var(--bg))}
+    .hero > .container{position:relative;padding:80px 0 120px}
+    .kicker{text-transform:uppercase;letter-spacing:.2em;color:var(--muted);font-size:12px;margin-bottom:10px}
+    h1{font-size: clamp(32px, 6vw, 60px);line-height:1.02;margin:0 0 16px;font-weight:800}
+    .sub{font-size: clamp(16px, 2.8vw, 20px);opacity:.9;max-width:750px}
+    .badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .badge{border:1px solid rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;font-weight:600;opacity:.9}
+
+    /* SECTIONS */
+    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
+    section h2{font-size: clamp(24px,4.5vw,36px);margin:0 0 20px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:18px}
+    .two{grid-column: span 12}
+    .three{grid-column: span 12}
+    .four{grid-column: span 12}
+    @media(min-width:720px){
+      .two{grid-column: span 6}
+      .three{grid-column: span 4}
+      .four{grid-column: span 3}
+    }
+
+    /* WORKS */
+    .works-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .work{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:center}
+    .work small{display:block;opacity:.7}
+
+    /* STUDIO */
+    .gear{columns: 2 300px;column-gap: 24px}
+    .gear li{break-inside:avoid;border:1px solid rgba(255,255,255,.08);background:var(--card);border-radius:12px;padding:10px 12px;margin:0 0 12px}
+
+    /* CONTACT */
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    @media(max-width:900px){.contact{grid-template-columns:1fr}}
+    input, textarea{width:100%;background:#0f0f15;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;color:var(--text);font:inherit}
+    label{font-weight:600;font-size:14px}
+    .hint{color:var(--muted);font-size:12px}
+    .btn{border:0;padding:12px 16px;border-radius:12px;font-weight:800;background:linear-gradient(45deg,var(--brand),var(--brand-2));color:#0b0b0f;cursor:pointer}
+    .footer{padding:40px 0;color:var(--muted);text-align:center}
+
+    /* UTIL */
+    .row{display:flex;gap:16px;flex-wrap:wrap}
+    .mt-1{margin-top:8px}.mt-2{margin-top:16px}.mt-3{margin-top:24px}.mt-4{margin-top:32px}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand"><span class="dot"></span> <span>Nascente Creative Studio</span></a>
+      <div class="menu">
+        <a href="#works">Trabalhos</a>
+        <a href="#studio">Estúdio</a>
+        <a href="#collab">Colaborações</a>
+        <a href="#courses">Cursos</a>
+        <a href="#events">Eventos</a>
+        <a class="cta" href="#contact">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="container">
+      <div class="kicker">Estarreja, Portugal • Gravação e Produção</div>
+      <h1>Nascente Creative Studio – <span style="opacity:.7">gravação & produção</span></h1>
+      <p class="sub">Estúdio para realização de <strong>Demos, Singles, Álbuns e Clipes</strong>. Produção completa: captação, edição, mixagem e masterização.</p>
+      <div class="badges">
+        <span class="badge">Produção</span>
+        <span class="badge">Gravação</span>
+        <span class="badge">Edição</span>
+        <span class="badge">Mixagem</span>
+        <span class="badge">Arranjos</span>
+        <span class="badge">Masterização</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT / BIO CURTA -->
+  <section id="about">
+    <div class="container grid">
+      <div class="two">
+        <div class="card">
+          <h2>Sobre</h2>
+          <p>Somos o <strong>Nascente Creative Studio</strong>, em Estarreja (Portugal). Focamos em <em>gravação e produção</em> de projetos independentes e autorais: <strong>demos, singles, álbuns e clipes</strong>. Oferecemos <strong>produção, edição, mixagem, arranjos e masterização</strong>, com fluxo ágil e som moderno.</p>
+          <div class="row mt-2">
+            <a class="btn" href="#contact">Pedir orçamento</a>
+            <a class="btn" href="#works">Ouvir portfólio</a>
+          </div>
+        </div>
+      </div>
+      <div class="two">
+        <div class="card">
+          <h2>Ouça</h2>
+          <!-- Exemplo: embed de playlist/artista Spotify -->
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section id="works">
+    <div class="container">
+      <h2>Trabalhos recentes</h2>
+      <div class="works-list mt-2">
+        <!-- Cada item pode apontar para Spotify/YouTube -->
+        <a class="work" href="https://open.spotify.com/track/" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=200&auto=format&fit=crop" width="60" height="60" alt="Capa" style="border-radius:10px">
+          <div>
+            <strong>Artista – Título</strong>
+            <small>[Produtor, Compositor, Mixer] • 2025</small>
+          </div>
+        </a>
+        <a class="work" href="https://open.spotify.com/track/" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=200&auto=format&fit=crop" width="60" height="60" alt="Capa" style="border-radius:10px">
+          <div>
+            <strong>Artista – Título</strong>
+            <small>[Produtor] • 2025</small>
+          </div>
+        </a>
+        <a class="work" href="https://open.spotify.com/track/" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=200&auto=format&fit=crop" width="60" height="60" alt="Capa" style="border-radius:10px">
+          <div>
+            <strong>Artista – Título</strong>
+            <small>[Compositor] • 2024</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO -->
+  <section id="studio">
+    <div class="container">
+      <h2>O Estúdio</h2>
+      <p class="mt-1">Infraestrutura pronta para captação vocal/instrumental, edição, mix e master.</p>
+      <div class="grid mt-2">
+        <div class="two card">
+          <h3 style="margin-top:0">Equipamento em Destaque</h3>
+          <ul class="gear">
+            <li>Interfaces — SSL e Audient</li>
+            <li>Monitores — Kali Audio LP‑6 2nd Wave</li>
+            <li>Microfones — Townsend Labs L22; Slate Digital ML‑1; Shure SM57; AKG D112; Antelope Edge Note; Antelope Axino Synergy; Beyerdynamic M90 Pro X</li>
+            <li>Headphones — Beyerdynamic DT 990; AKG K92; t.bone HD 515</li>
+          </ul>
+        </div>
+        <div class="two card">
+          <h3 style="margin-top:0">Galeria</h3>
+          <div class="grid">
+            <div class="two"><img class="card" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop" alt="Estúdio 1"></div>
+            <div class="two"><img class="card" src="https://images.unsplash.com/photo-1513863323963-1a3a40b97a59?q=80&w=1600&auto=format&fit=crop" alt="Estúdio 2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABS -->
+  <section id="collab">
+    <div class="container grid">
+      <div class="two card">
+        <h2>Colaborações</h2>
+        <p>Aberto a co‑writes, produção remota e sessões presenciais. Envia uma demo e contexto do projeto para avaliarmos juntos.</p>
+        <ul>
+          <li>Co‑writing (sessões de 3–4h)</li>
+          <li>Produção completa (pré‑produção → mix → master)</li>
+          <li>Remix / Versões alternativas</li>
+        </ul>
+      </div>
+      <div class="two card">
+        <h2>Testemunhos</h2>
+        <p>“Profissional incrível, arranjos modernos e atenção ao detalhe.” — <em>Artista X</em></p>
+        <p>“Transformou uma demo simples numa faixa pronta para editorial.” — <em>Artista Y</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <div class="container grid">
+      <div class="two card">
+        <h2>Cursos & Mentorias</h2>
+        <p>Workshops de produção (Ableton/Logic), composição para pop e mentoria 1:1 para lançamentos.</p>
+        <div class="row mt-2">
+          <a class="btn" href="#contact">Pedir info</a>
+          <a class="btn" href="#events">Ver eventos</a>
+        </div>
+      </div>
+      <div class="two card">
+        <h2>Próximos módulos</h2>
+        <ul>
+          <li>Sound Design para Pop Eletrónica</li>
+          <li>Mix Rápida para Demos Profissionais</li>
+          <li>Arranjos Vocais Comerciais</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="container">
+      <h2>Eventos</h2>
+      <p>Agenda de sessões e workshops. Atualiza com datas e links.</p>
+      <div class="grid mt-2">
+        <div class="three card">
+          <strong>Sessões de co‑write – Lisboa</strong>
+          <div class="mt-1">Sábados, 14:00–18:00</div>
+          <div class="mt-1 hint">Vagas limitadas</div>
+        </div>
+        <div class="three card">
+          <strong>Workshop: Produção Pop Moderna</strong>
+          <div class="mt-1">12 Dez 2025 • Online</div>
+          <div class="mt-1 hint">Inscrições por formulário</div>
+        </div>
+        <div class="three card">
+          <strong>Mentoria 1:1</strong>
+          <div class="mt-1">Por marcação</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contato</h2>
+      <div class="contact mt-2">
+        <form class="card" action="https://formspree.io/f/myzbwqvr" method="POST">
+          <label>Nome
+            <input name="nome" required placeholder="Seu nome" class="mt-1" />
+          </label>
+          <div class="row mt-2">
+            <div style="flex:1">
+              <label>Email
+                <input type="email" name="email" required placeholder="voce@email.com" class="mt-1" />
+              </label>
+            </div>
+            <div style="flex:1">
+              <label>WhatsApp
+                <input name="whatsapp" placeholder="+351 …" class="mt-1" />
+              </label>
+            </div>
+          </div>
+          <label class="mt-2">Mensagem
+            <textarea name="mensagem" rows="6" placeholder="Fala sobre o projeto, prazos e referências" class="mt-1"></textarea>
+          </label>
+          <p class="hint mt-1">Este formulário usa o Formspree (plano gratuito). Substitui o endpoint acima pelo teu.</p>
+          <button class="btn mt-2" type="submit">Enviar mensagem</button>
+        </form>
+        <div>
+          <div class="card">
+            <strong>Email</strong>
+            <div class="mt-1"><a href="mailto:contato@teuestudio.com">contato@teuestudio.com</a></div>
+            <strong class="mt-3">Localização</strong>
+            <div class="mt-1">Estarreja, Portugal</div>
+            <strong class="mt-3">Redes</strong>
+            <div class="row mt-1">
+              <a class="badge" href="#">Instagram</a>
+              <a class="badge" href="#">YouTube</a>
+              <a class="badge" href="#">Spotify</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © <span id="year"></span> por Nascente Creative Studio. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // rolagem suave para âncoras
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'})}
+      });
+    });
+  </script>
+</body>
+</html>
